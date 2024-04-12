@@ -1,14 +1,13 @@
 ﻿# Definindo as variáveis
 #subistituir as informações abaixo conforme sua necessidade!
-$sourceFolder = "C:\Users\Fscot\Documents\certificados"
-$destinationFolder = "C:\Users\Fscot\Documents\BKP_powershell"
+$sourceFolder = "Local dos arquivos a ser copiado EX:C:\Users\Fscot\Documents\certificados"
+$destinationFolder = "Destino dos arquivos EX:C:\Users\Fscot\Documents\BKP_powershell"
 $backupFileName = "Backup_$(Get-Date -Format 'yyyyMMdd_HHmmss').zip"
 $backupFilePath = Join-Path -Path $destinationFolder -ChildPath $backupFileName
-$zipPassword = "bkp2012"
 $maxBackupCount = 7
 $emailFrom = "colocar seu e-mail de envio"
 $emailTo = "e-mail que vai receber as mensagens"
-$smtpServer = "smtps.bol.com.br"
+$smtpServer = "EX: smtps.bol.com.br"
 $smtpPort = 587
 $smtpPassword = ConvertTo-SecureString "Senha do email" -AsPlainText -Force
 $smtpCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList ($emailFrom, $smtpPassword)
